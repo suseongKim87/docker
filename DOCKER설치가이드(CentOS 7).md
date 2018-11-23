@@ -27,7 +27,30 @@ $ sudo yum-config-manager --enable docker-ce-test
 **--disable** flag를 실행중인 yum-config-manager 명령어와 함께  
 edge 또는 test repository disable 할 수 있습니다.
 ```{.text}
-$ $ sudo yum-config-manager --disable docker-ce-edge
+$ sudo yum-config-manager --disable docker-ce-edge
 ```
 
 ### Step2> docker(CE) 설치하기 : Install docker CE(Community Edition)
+1. 아래의 명령어를 통해 Docker CE의 최신 버전을 설치하거나 특정 버전을 설치가 가능합니다.
+```{.text}
+$ sudo yum-config-manager --disable docker-ce-edge
+```
+GPG 키를 수락할지 묻는 메시지가 나타나면 지문이 일치하는지 확인해야 합니다.  
+*** 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35 ***  
+docker를 installed 하고 바로 실행되지 않습니다. docker의 group은 생성되었지만, 사용자가 추가 되지 않았기 때문입니다.  
+
+2. Docker CE의 특정 버전을 설치하려면 사용 가능한 버전을 repo에 나열한 다음 선택하여 설치하세요.
+```{.text}
+$ yum list docker-ce --showduplicates | sort -r
+docker-ce.x86_64         3:18.09.0-3.el7                        docker-ce-test
+docker-ce.x86_64         3:18.09.0-3.el7                        docker-ce-stable
+docker-ce.x86_64         3:18.09.0-3.el7                        docker-ce-edge
+docker-ce.x86_64         3:18.09.0-3.el7                        @docker-ce-edge
+docker-ce.x86_64         3:18.09.0-2.1.rc1.el7                  docker-ce-test
+docker-ce.x86_64         3:18.09.0-1.5.beta5.el7                docker-ce-test
+docker-ce.x86_64         3:18.09.0-1.3.beta3.el7                docker-ce-test
+.
+.
+.
+```
+sort 를 사용하면, 위 내용처럼 최신 순을 보여줍니다. 
