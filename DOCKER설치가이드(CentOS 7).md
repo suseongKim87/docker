@@ -61,6 +61,11 @@ $ sudo yum install docker-ce-<VERSION STRING>
 3. Docker를 실행합니다.  
 ```{.text}
 $ sudo systemctl start docker
+```
+
+4. ***hello-world*** 이미지를 통해 docker가 올바르게 설칙가 완료 되었는지를 확인합니다.
+```{.text}
+$ sudo docker run hello-world
 
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -88,9 +93,8 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-```
-
-4. ***hello-world*** 이미지를 통해 docker가 올바르게 설칙가 완료 되었는지를 확인합니다.
-```{.text}
-$ sudo docker run hello-world
+ 
+[root@localhost ~]# docker ps -al
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+ef56243f8dd8        hello-world         "/hello"            17 seconds ago      Exited (0) 16 seconds ago                       distracted_cori
 ```
