@@ -53,5 +53,12 @@ docker-ce.x86_64         3:18.09.0-1.3.beta3.el7                docker-ce-test
 .
 .
 ```
-sort 를 사용하면, 위 내용처럼 최신 순을 보여줍니다.  
+sort 를 사용하면, 위 내용처럼 최신 순을 보여주며, 위 해당 버전을 골라 아래와 같이 설치하면 됩니다.
+```{.text}
+$ sudo yum install docker-ce-<VERSION STRING>
+```
 
+3. Docker를 실행합니다.  
+```{.text}
+$ sudo systemctl start docker
+```
