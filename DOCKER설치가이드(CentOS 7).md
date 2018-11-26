@@ -98,3 +98,16 @@ For more examples and ideas, visit:
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
 ef56243f8dd8        hello-world         "/hello"            17 seconds ago      Exited (0) 16 seconds ago                       distracted_cori
 ```
+
+### Step3> docker(CE) 제거하기 : Uninstall Docker CE(Community Edition)
+1. Docker package 제거하기
+```{.text}
+$ sudo yum remove docker-ce
+```
+
+2. 라이브러리 삭제하기
+Images, containers, volumes, or customized configuration 파일들은 자동으로 지워지지 않습니다.  
+아래의 명령어를 통해 삭제해야합니다.
+```{.text}
+$ sudo rm -rf /var/lib/docker
+```
