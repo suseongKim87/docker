@@ -34,7 +34,7 @@ $ sudo yum-config-manager --disable docker-ce-edge
 ### Step2> docker(CE) 설치하기 : Install docker CE(Community Edition)
 1. 아래의 명령어를 통해 Docker CE의 최신 버전을 설치하거나 특정 버전을 설치가 가능합니다.
 ```{.text}
-$ sudo yum-config-manager --disable docker-ce-edge
+$ sudo yum install docker-ce
 ```
 GPG 키를 수락할지 묻는 메시지가 나타나면 지문이 일치하는지 확인해야 합니다.  
 *** 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35 ***  
