@@ -1,9 +1,10 @@
 ## CentOS 7 DOCKER 설치가이드
-docker는 ce(Community Edition)과 ee(Enterprise Edition) 두개가 존재합니다.
+***docker는 CE(Community Edition)*** 와 ***EE(Enterprise Edition)*** 두개가 존재합니다.
 
-일단 컨테이너 기반의 앱을 실험하고 소규모 구성을 목적으로 하고 있기 때문에 무료버전인 CE를 사용하도록 하겠습니다. 
-
-(참고로 EE는 유료입니다.)
+***Docker Community Edition(CE)*** 는 무료로 누구나 사용할 수 있습니다.  
+Docker CE는 오픈 소스로서, Windows, Mac 및 Linux를 비롯한 다양한 플랫폼에서 사용할 수 있습니다.  
+***Docker Enterprise Edition(EE)*** 에는 워크플로 관리 및 보안을 위한 기능이 추가되어 있으며 유료로 사용할 수 있습니다.  
+일단 컨테이너 기반의 앱을 실험하고 소규모 구성을 목적으로 하고 있기 때문에 무료버전인 CE를 사용하도록 하겠습니다.  
 
 ### Step1> docker(CE) 설치하기 : docker repository 설정하기
 1. 먼저 처음 설치하는 host machine이라면, docker repository 설치를 해야합니다. 그래야 install과 update를 할 수 있습니다.  
